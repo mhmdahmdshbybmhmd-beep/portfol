@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إتمام الدفع</title>
+  <link rel="stylesheet" href="css/styje.css" />
+  <link rel="stylesheet" href="css/products.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header>
+    <h1>متجري الإلكتروني</h1>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="products.html">المنتجات</a>
+      <a href="cart.html">السلة</a>
+      <a href="contact.html">اتصل بنا</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <section class="page-heading">
+      <h2>إتمام الدفع</h2>
+      <p>أدخل بياناتك لاستكمال عملية الشراء.</p>
+    </section>
+
+    <section class="checkout-layout">
+      <form class="checkout-form">
+        <label>الاسم الكامل</label>
+        <input type="text" name="fullName" placeholder="أدخل اسمك" />
+
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="email" placeholder="example@mail.com" />
+
+        <label>العنوان</label>
+        <textarea rows="3" name="address" placeholder="أدخل عنوان التوصيل"></textarea>
+
+        <fieldset class="payment-options">
+          <legend>طريقة الدفع</legend>
+          <label class="payment-option">
+            <input type="radio" name="paymentMethod" value="card" checked />
+            <span>بطاقة بنكية</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="paymentMethod" value="vodafone" />
+            <span>فودافون كاش</span>
+          </label>
+        </fieldset>
+
+        <div id="card-fields" class="payment-fields">
+          <label>اسم حامل البطاقة</label>
+          <input type="text" name="cardName" placeholder="مثال: أحمد محمد" />
+
+          <label>رقم البطاقة</label>
+          <input type="text" name="cardNumber" placeholder="1234 5678 9012 3456" />
+
+          <div class="payment-inline">
+            <div>
+              <label>تاريخ الانتهاء</label>
+              <input type="text" name="expiry" placeholder="MM/YY" />
+            </div>
+            <div>
+              <label>CVV</label>
+              <input type="text" name="cvv" placeholder="123" />
+            </div>
+          </div>
+        </div>
+
+        <div id="vodafone-fields" class="payment-fields hidden">
+          <label>رقم فودافون كاش</label>
+          <input type="tel" name="vodafonePhone" placeholder="01XXXXXXXXX" />
+
+          <label>المبلغ</label>
+          <input type="text" name="vodafoneAmount" value="34,999 ريال" readonly />
+        </div>
+
+        <button type="submit" class="add-btn">تأكيد الشراء</button>
+      </form>
+
+      <aside class="cart-summary">
+        <h3>ملخص الطلب</h3>
+        <p>الإجمالي: 34,999 ريال</p>
+        <p>الشحن: مجاني</p>
+      </aside>
+    </section>
+  </main>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>
